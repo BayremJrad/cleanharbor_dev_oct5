@@ -1,0 +1,37 @@
+$kind: collection
+description: |-
+  # Vehicle Service Collection
+
+  The **Vehicle Service API** provides a RESTful interface for managing a registry of vehicles. Use this collection to create, retrieve, update, and delete vehicle records.
+
+  ## Base URL
+
+  All requests use the `{{baseUrl}}` environment variable. The active environment points this to the mock server:
+
+  ```
+  https://e6bee6c3-e027-478c-986d-8b4b12923c25.mock.pstmn.io
+  ```
+
+  Select the **Mock Environment** in Postman before sending any requests.
+
+  ## Authentication
+
+  No authentication is required for any request in this collection. All endpoints are open and can be called directly once the `{{baseUrl}}` variable is set.
+
+  ## Requests
+
+  | Method | Endpoint | Description |
+  |--------|----------|-------------|
+  | `POST` | `/vehicles` | Create a new vehicle record |
+  | `GET` | `/vehicles/:id` | Retrieve a single vehicle by ID |
+  | `PATCH` | `/vehicles/:id` | Update fields on an existing vehicle |
+  | `DELETE` | `/vehicles/:id` | Remove a vehicle record |
+  | `GET` | `/vehicles` | List all vehicles, with optional brand filtering |
+variables:
+  baseUrl: "{{baseUrl}}"
+auth:
+  - id: 411bade0-fd2f-4fb2-af18-d0a82470a73d
+    type: apikey
+    name: apikey auth
+    credentials:
+      key: X-API-Key

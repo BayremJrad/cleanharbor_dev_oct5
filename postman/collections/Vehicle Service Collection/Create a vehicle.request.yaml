@@ -1,0 +1,39 @@
+$kind: http-request
+description: |-
+  Creates a new vehicle record in the registry.
+
+  **Request body** (`application/json`):
+
+  | Field | Type | Required | Description |
+  |-------|------|----------|-------------|
+  | `nickName` | string | No | A friendly name for the vehicle |
+  | `vin` | string | Yes | Vehicle Identification Number (17 characters) |
+  | `make` | string | Yes | Manufacturer (e.g. `Ford`, `Toyota`) |
+  | `model` | string | Yes | Model name (e.g. `Mustang`, `Camry`) |
+  | `year` | string | Yes | Four-digit model year (e.g. `"2024"`) |
+  | `miles` | number | Yes | Current odometer reading in miles |
+
+  **Responses:**
+  - `201 Created` — Vehicle successfully created
+  - `400 Bad Request` — A required attribute is missing
+  - `409 Conflict` — A vehicle with the same VIN already exists
+  - `500 Internal Server Error` — Unexpected server error
+url: "{{baseUrl}}/vehicles"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "nickName": "The Lisa Marie",
+      "vin": "4M2DV11W4RDJ53329",
+      "make": "Mercury",
+      "model": "Villager",
+      "year": "1994",
+      "miles": 159864
+    }
+settings: {}
+examples: ./.resources/Create a vehicle.resources/examples
+order: 1000

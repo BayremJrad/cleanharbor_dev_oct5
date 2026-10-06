@@ -1,0 +1,22 @@
+$kind: http-request
+description: |-
+  Permanently removes a vehicle record from the registry.
+
+  **Path parameter:**
+
+  | Parameter | Description |
+  |-----------|-------------|
+  | `:id` | The unique identifier of the vehicle to delete |
+
+  **Responses:**
+  - `204 No Content` — Vehicle deleted successfully (no response body)
+  - `500 Internal Server Error` — Unexpected server error
+url: "{{baseUrl}}/vehicles/:id"
+method: DELETE
+headers:
+  Accept: application/json
+pathVariables:
+  id: "1"
+settings: {}
+examples: ./.resources/Delete a vehicle.resources/examples
+order: 4000
