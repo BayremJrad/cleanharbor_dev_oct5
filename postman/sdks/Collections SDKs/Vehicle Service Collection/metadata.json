@@ -1,0 +1,54 @@
+{
+  "entityId": "18CcAE4d43765B71A6F35Be0",
+  "entityType": "collections",
+  "buildId": 22841,
+  "createdAt": "2026-10-06T10:02:56.341Z",
+  "downloads": [
+    {
+      "language": "java",
+      "status": "success",
+      "createdAt": "2026-10-06T10:02:56.350Z",
+      "link": "https://us-prod-sdk-gen-api-code-gen-uploads.s3.us-east-1.amazonaws.com/7497387f-869d-457b-b4de-43a2c0b00035/vehicle-service-collection-sdk-java-1.0.0.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LJBU7GKGBWHDT%2F20261006%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261006T100307Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECoaCXVzLWVhc3QtMSJHMEUCIQDErbtKuA4D9eNVEFOdgh2C1vpnrZzTwDRIUFXRnpD%2BvwIgcuAgMdxHwhtvstrqrMow1GAOjnOmH9pcrEEU5%2Fgg2G4qnAUI8v%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjM2NTIxNTgiDEb%2BdV3iPI1iTwiFCirwBAUD5SG%2F%2B7GDEq5AnHqOdVoIBSoZ3xQLLT1QGT2YOKNwN82aVwCxA54QDD5c6i2EXW8wJhUsL1nriVqAnrFkcevDcsw48vtPUucImAK3AqLsMu0wYCJzljTEUTxUvvZ7%2FADGwHbMcf9ALSylQCHVUJkVIjOIuFNOIavvg5oqAF40l896P5RcXu567rTpJZcAxO%2FQieMLvNj%2FzY8Qp9Xw73yPc3kmvexD%2FYxgvU6ppyJObtXJvoA6ePfxcPhXN%2FIRqAMD6lDrtU7CiGMwEPsanprsrouc1hOJN3gAhMIrkEDFKdZVZ2uj8%2FY3ze4fp%2BrlujwpWSi6wqGNXkJA1mpRC5P%2FOGlDt%2FHz8dbwFmISAG62tzzTx9qvNjdM3xflvS17hg0XN6igo31T%2BbsnGat55ITlK6FBwZvw8i2Nz2oEvS31goJlVDM%2F61pXeZYUEtyiFwkwbu03ouag9w2UGcSpiv7OQRcgFv17wVXsaSGVQIu5CNj%2BDsGFWMUQB0YRlfNxg2EvxbZyxSBDCAGngkrmr5VDqCdCBKVZE44yUhcJssJRrYuiprN5OWEU3NVmQwY70hXR51QRbvHXBM66obcQNZkGOZvPyrulir7oMl4vBLghQi6V7st87rNXjkpF45kuCm6fPaeyv5FJh%2FkdsJl%2FeWMh6WPORNhAHUjhd0%2BsUMYulyFx7FZ7zNAq3TVh0uUG4%2BDCoRI5UkiMJLkXpHm6FEZCMYuL4n5iqOWXgUAxDEVVV7lHZN1Jd10m8nKLP66wJ1WPZew4ZQrNFncX1HGMhYyhJXQN1YRZ2HUxgrh%2BsHtz6%2BeWF96podMC9R0GNj1QoDDbjpPWBjqZAQ0GCoY1hkO0NSR0wohki5qmGd2YFGV7%2BOMKTESmYuiTnoIQyPEU5UQdSeHYI%2FfM2K%2BXKsN%2FZNhdInFC6LtKGu5Kch%2FadkZWF%2Bqz5TROSK%2FBU99SCpUwqgIponTfpiyU8Bukdrx%2BcKxR4LjGcszn7O3d8OCwtsmDweWnw7T5SAkwNIhdfdtydEEUyVRW%2Bu3iSqmO%2BqHWtJgANA%3D%3D&X-Amz-Signature=1ea7ce55554d7324cd59cbcf6af70a3252ba7d8b2e530d209e97e12708b8f37f&X-Amz-SignedHeaders=host&x-id=GetObject",
+      "contentHash": "c678ca1e486b645c2d0ca862dc72ac33c988c9d1e1848536c285d91d81bfb388",
+      "logs": [
+        {
+          "message": "Mapped API: 1 service, 5 operations, 1 model, 1 auth scheme.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-10-06T10:03:02.359Z"
+        },
+        {
+          "message": "Mapped models: 1.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-10-06T10:03:02.359Z"
+        },
+        {
+          "message": "Mapped services: 1 service, 5 operations.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-10-06T10:03:02.359Z"
+        },
+        {
+          "message": "Authentication schemes: 1.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-10-06T10:03:02.359Z"
+        },
+        {
+          "message": "Generating Java SDK.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-10-06T10:03:02.359Z"
+        },
+        {
+          "message": "Rendered 68 pre-delivery SDK files.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-10-06T10:03:02.359Z"
+        }
+      ]
+    }
+  ],
+  "sdkName": "vehicle-service-collection-sdk"
+}

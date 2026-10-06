@@ -29,6 +29,14 @@ description: |-
   | `GET` | `/vehicles` | List all vehicles, with optional brand filtering |
 variables:
   baseUrl: "{{baseUrl}}"
+  vehicleId: ""
+scripts:
+  - type: http:afterResponse
+    code: |-
+      pm.test("Status code is 200 or 201", function () {
+          pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);
+      });
+    language: text/javascript
 auth:
   - id: 411bade0-fd2f-4fb2-af18-d0a82470a73d
     type: apikey

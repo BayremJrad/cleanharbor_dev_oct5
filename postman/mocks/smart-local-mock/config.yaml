@@ -1,0 +1,15 @@
+id: 01a1109a-c83e-707b-90f7-fbd0ee0d4756
+version: 1
+name: Smart Local Mock – Vehicle Service (Stateful)
+slug: new-mock-52772
+enableSession: true
+protocol: http
+port: 4501
+autoRestartOnChange: true
+logging:
+  level: verbose
+  showBody: true
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true

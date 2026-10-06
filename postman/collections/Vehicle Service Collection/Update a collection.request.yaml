@@ -29,7 +29,9 @@ headers:
   Content-Type: application/json
   Accept: application/json
 pathVariables:
-  id: "1"
+  - key: id
+    value: "{{vehicleId}}"
+    description: ""
 body:
   type: json
   content: |-

@@ -16,7 +16,9 @@ method: DELETE
 headers:
   Accept: application/json
 pathVariables:
-  id: "1"
+  - key: id
+    value: "{{vehicleId}}"
+    description: ""
 settings: {}
 examples: ./.resources/Delete a vehicle.resources/examples
 order: 4000

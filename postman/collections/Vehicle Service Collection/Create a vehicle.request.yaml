@@ -34,6 +34,18 @@ body:
       "year": "1994",
       "miles": 159864
     }
+scripts:
+  - type: afterResponse
+    code: |2-
+          var jsonData = pm.response.json();
+
+      pm.test("VIN is a string", function () {
+          pm.expect(jsonData.vin).to.be.a.string;
+      });
+
+
+      pm.collectionVariables.set("vehicleId", jsonData.id);
+    language: text/javascript
 settings: {}
 examples: ./.resources/Create a vehicle.resources/examples
 order: 1000
