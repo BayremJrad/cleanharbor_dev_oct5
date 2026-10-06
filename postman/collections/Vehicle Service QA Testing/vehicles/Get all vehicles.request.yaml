@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{baseUrl}}/vehicles?brand=string"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  brand: string
+settings: {}
+examples: ./.resources/Get all vehicles.resources/examples
+order: 2000

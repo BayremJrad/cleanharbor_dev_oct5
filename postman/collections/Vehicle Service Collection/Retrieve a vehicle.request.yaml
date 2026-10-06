@@ -1,0 +1,109 @@
+$kind: http-request
+description: |-
+  Retrieves a single vehicle record by its unique ID.
+
+  **Path parameter:**
+
+  | Parameter | Description |
+  |-----------|-------------|
+  | `:id` | The unique identifier of the vehicle to retrieve |
+
+  **Responses:**
+  - `200 OK` — Vehicle record returned successfully
+  - `404 Not Found` — No vehicle exists with the given ID
+  - `500 Internal Server Error` — Unexpected server error
+url: "{{baseUrl}}/vehicles/:id"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: "{{vehicleId}}"
+    description: ""
+scripts:
+  - type: afterResponse
+    code: |-
+      const statusCode = pm.response.code;
+
+      if (statusCode === 200) {
+          pm.test("Status code is 200", () => {
+              pm.response.to.have.status(200);
+          });
+
+          pm.test("Response has Content-Type: application/json", () => {
+              pm.response.to.have.header("Content-Type");
+              pm.expect(pm.response.headers.get("Content-Type")).to.include("application/json");
+          });
+
+          const json = pm.response.json();
+
+          pm.test("Response body is an object", () => {
+              pm.expect(json).to.be.an("object");
+          });
+
+          pm.test("'id' is a number", () => {
+              pm.expect(json).to.have.property("id");
+              pm.expect(json.id).to.be.a("number");
+          });
+
+          pm.test("'nickName' is a string", () => {
+              pm.expect(json).to.have.property("nickName");
+              pm.expect(json.nickName).to.be.a("string");
+          });
+
+          pm.test("'vin' is a non-empty string", () => {
+              pm.expect(json).to.have.property("vin");
+              pm.expect(json.vin).to.be.a("string").and.not.empty;
+          });
+
+          pm.test("'make' is a string", () => {
+              pm.expect(json).to.have.property("make");
+              pm.expect(json.make).to.be.a("string");
+          });
+
+          pm.test("'model' is a string", () => {
+              pm.expect(json).to.have.property("model");
+              pm.expect(json.model).to.be.a("string");
+          });
+
+          pm.test("'year' is a string", () => {
+              pm.expect(json).to.have.property("year");
+              pm.expect(json.year).to.be.a("string");
+          });
+
+          pm.test("'miles' is a number", () => {
+              pm.expect(json).to.have.property("miles");
+              pm.expect(json.miles).to.be.a("number");
+          });
+
+          pm.test("Response contains no unexpected fields", () => {
+              const allowedKeys = ["id", "nickName", "vin", "make", "model", "year", "miles"];
+              const extraKeys = Object.keys(json).filter(k => !allowedKeys.includes(k));
+              pm.expect(extraKeys, `Unexpected fields: ${extraKeys}`).to.be.empty;
+          });
+
+      } else if (statusCode === 404) {
+          pm.test("Status code is 404", () => {
+              pm.response.to.have.status(404);
+          });
+
+          const json = pm.response.json();
+
+          pm.test("404 response has a 'message' string", () => {
+              pm.expect(json).to.have.property("message");
+              pm.expect(json.message).to.be.a("string").and.not.empty;
+          });
+
+      } else if (statusCode === 500) {
+          pm.test("Status code is 500", () => {
+              pm.response.to.have.status(500);
+          });
+      } else {
+          pm.test(`Unexpected status code: ${statusCode}`, () => {
+              pm.expect.fail(`Received unexpected status code ${statusCode}`);
+          });
+      }
+    language: text/javascript
+settings: {}
+examples: ./.resources/Retrieve a vehicle.resources/examples
+order: 2000

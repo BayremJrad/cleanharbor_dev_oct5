@@ -1,0 +1,48 @@
+$kind: http-request
+description: |-
+  Partially updates an existing vehicle record. Only the fields included in the request body will be modified.
+
+  **Path parameter:**
+
+  | Parameter | Description |
+  |-----------|-------------|
+  | `:id` | The unique identifier of the vehicle to update |
+
+  **Request body** (`application/json`) — all fields optional:
+
+  | Field | Type | Description |
+  |-------|------|-------------|
+  | `nickName` | string | Updated friendly name |
+  | `vin` | string | Updated VIN |
+  | `make` | string | Updated manufacturer |
+  | `model` | string | Updated model name |
+  | `year` | string | Updated model year |
+  | `miles` | number | Updated odometer reading |
+
+  **Responses:**
+  - `200 OK` — Vehicle updated successfully
+  - `400 Bad Request` — Request body is malformed or contains invalid values
+  - `500 Internal Server Error` — Unexpected server error
+url: "{{baseUrl}}/vehicles/:id"
+method: PATCH
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: "{{vehicleId}}"
+    description: ""
+body:
+  type: json
+  content: |-
+    {
+      "nickName": "The Lisa Marie",
+      "vin": "4M2DV11W4RDJ53329",
+      "make": "Mercury",
+      "model": "Villager",
+      "year": "1994",
+      "miles": 159999
+    }
+settings: {}
+examples: ./.resources/Update a collection.resources/examples
+order: 3000

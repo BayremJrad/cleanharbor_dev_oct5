@@ -1,0 +1,4 @@
+$kind: collection
+description: This is a description
+variables:
+  baseUrl: "{{baseUrl}}"

@@ -1,0 +1,24 @@
+workspace:
+  id: d15eff3a-b245-41c4-8b97-2835f2bd7e61
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
+cloudResources:
+  collections:
+    ../postman/collections/Vehicle Service QA Testing: 58729307-52e9b3e9-d1af-496e-87a5-3fc01f7c74dd
+    ../postman/collections/Vehicle Service Collection: 58729315-db9769df-3de1-44b8-80e3-af77bd7fce66
+  environments:
+    ../postman/environments/Mock Environment.environment.yaml: 58729307-68e9f8a5-f91d-45f0-bf4a-4e1b88b49491
+  globals:
+    ../postman/globals/workspace.globals.yaml: 5578d20c-d535-44b0-85b6-d50850de55b3
+  specs:
+    ../postman/specs/Vehicle Service Spec/index.yaml: 3cbe716b-9b8c-4c97-b711-d0e4f68cd6a4
+  documents:
+    ../postman/documents/Getting Started - Vehicle Service API.md: 5d71347b-6346-4b00-938b-a764c701e90c
+resourceNameMappings:
+  specs:
+    - ../postman/specs/Vehicle Service Spec/index.yaml: Vehicle Service Spec
+
+localResources:
+  specs:
+    - ../postman/specs/Vehicle Service Spec/index.yaml

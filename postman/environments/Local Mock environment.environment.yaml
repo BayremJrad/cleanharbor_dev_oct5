@@ -1,0 +1,5 @@
+name: Local Mock environment
+values:
+  - key: baseUrl
+    value: 'http://localhost:4500'
+color: 60

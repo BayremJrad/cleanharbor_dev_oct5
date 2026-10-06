@@ -1,0 +1,22 @@
+$kind: http-request
+description: |-
+  Returns a list of all vehicle records. Supports optional filtering by brand.
+
+  **Query parameters:**
+
+  | Parameter | Type | Required | Description |
+  |-----------|------|----------|-------------|
+  | `brand` | string | No | Filter results to vehicles matching this brand/make (e.g. `Honda`) |
+
+  **Responses:**
+  - `200 OK` — List of vehicles returned successfully
+  - `500 Internal Server Error` — Unexpected server error
+url: "{{baseUrl}}/vehicles?brand=Honda"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  brand: Honda
+settings: {}
+examples: ./.resources/Get all vehicles.resources/examples
+order: 5000
